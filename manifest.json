@@ -1,5 +1,5 @@
 {
-	"description": "An example dynamic theme",
+	"description": "Firefox Quantum darker theme for UI & website",
 	"homepage_url": "https://github.com/Oyana/darkerQuantum",
 	"manifest_version": 2,
 	"name": "darkerQuantum",
@@ -34,7 +34,7 @@
 	],
 	"applications": {
 		"gecko": {
-			"id": "favourite-colour-examples@mozilla.org"
+			"id": "darkerQuantum@oyana.org"
 		}
 	},
 	"version": "0.0.1"
