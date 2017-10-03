@@ -1,16 +1,27 @@
 {
+	"name": "darkerQuantum",
+	"applications": {
+		"gecko": {
+			"id": "darkerQuantum@oyana.org"
+		}
+	},
 	"description": "Firefox Quantum darker theme for UI & website",
 	"homepage_url": "https://github.com/Oyana/darkerQuantum",
 	"manifest_version": 2,
-	"name": "darkerQuantum",
+	"version": "0.0.2",
 	"browser_action": {
+		"default_icon": "img/ico.png",
 		"default_title": "darkerQuantum option"
 	},
 	"icons": {
 		"48": "img/ico.png"
 	},
 	"permissions": [
+		"*://*.google.fr/*",
+		"*://*.google.com/*",
+		"*://*.github.com/*",
 		"alarms",
+		"activeTab",
 		"tabs",
 		"topSites",
 		"storage",
@@ -25,17 +36,5 @@
 	"options_ui": {
 		"page": "html/options.html",
 		"browser_style": true
-	},
-	"content_scripts": [
-		{
-			"matches": ["*://*.mozilla.org/*"],
-			"js": ["borderify.js"]
-		}
-	],
-	"applications": {
-		"gecko": {
-			"id": "darkerQuantum@oyana.org"
-		}
-	},
-	"version": "0.0.1"
+	}
 }

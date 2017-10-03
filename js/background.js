@@ -63,3 +63,36 @@ checkTime();
 browser.alarms.onAlarm.addListener(checkTime);
 browser.alarms.create('checkTime', {periodInMinutes: 5});
 
+/*
+Toggle CSS: based on the current title, insert or remove the CSS.
+Update the page action's title and icon to reflect its state.
+*/
+toggleCSS = tab => {
+	if ( tab.url.indexOf("github.com") > -1 )
+	{
+		const CSS = "../css/github.css";
+		browser.tabs.insertCSS( {file: CSS} );
+	}
+	else if ( tab.url.indexOf("google.") > -1 )
+	{
+		const CSS = "../css/google.css";
+		browser.tabs.insertCSS( {file: CSS} );
+	}
+	console.log( tab.url );
+}
+
+/*
+When first loaded, initialize the page action for all tabs.
+*/
+var gettingAllTabs = browser.tabs.query({});
+gettingAllTabs.then((tabs) => {
+	for (let tab of tabs) {
+		toggleCSS(tab);
+	}
+});
+/*
+Each time a tab is updated, reset the page action for that tab.
+*/
+browser.tabs.onUpdated.addListener( (id, changeInfo, tab) => {
+	toggleCSS(tab);
+});
