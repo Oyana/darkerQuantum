@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-	<meta charset="utf-8">
-  </head>
-
+	<head>
+		<meta charset="utf-8">
+	</head>
 <body>
-  <form>
+	<form>
 		<hr />
 		<h4>Day param</h4>
 		<p>
@@ -17,8 +16,12 @@
 			<label>textcolor</label>
 			<input type="text" id="d_textcolor" />
 		</p>
-		<h4>night param</h4>
+		<p>
+			<label>bgURL</label>
+			<input type="text" id="d_bgURL" />
+		</p>
 		<hr />
+		<h4>Night param</h4>
 		<p>
 			<label>accentcolor</label>
 			<input type="text" id="n_accentcolor" />
@@ -27,9 +30,15 @@
 			<label>textcolor</label>
 			<input type="text" id="n_textcolor" />
 		</p>
+		<p>
+			<label>bgURL</label>
+			<input type="text" id="n_bgURL" />
+		</p>
 		<button type="submit">Save</button>
-  </form>
-  <script src="../js/options.js"></script>
+		<i>Use CTRL + F5 to reload theme after settings update (affter saving).</i>
+	</form>
+	<script src="../js/background.js"></script>
+	<script src="../js/options.js"></script>
 </body>
 
 </html>

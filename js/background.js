@@ -1,15 +1,13 @@
 var currentTheme = '';
 
 function getThemeSettings( theme ) {
-	var getdata = browser.storage.sync.get(['d_accentcolor','d_textcolor','n_accentcolor','n_textcolor']);
+	var getdata = browser.storage.sync.get(['d_accentcolor','d_textcolor','d_bgURL','n_accentcolor','n_textcolor','n_bgURL']);
 	getdata.then((res) => {
-		console.log( res.d_accentcolor );
-		console.log( theme );
 		if ( theme == "day" )
 		{
 			browser.theme.update({
 				images: {
-					headerURL: '../img/sun.jpg',
+					headerURL: res.d_bgURL || '../img/sun.jpg',
 				},
 				colors: {
 					accentcolor: res.d_accentcolor || '#000',
@@ -21,7 +19,7 @@ function getThemeSettings( theme ) {
 		{
 			browser.theme.update({
 				images: {
-					headerURL: '../img/moon.jpg',
+					headerURL: res.n_bgURL || '../img/moon.jpg',
 				},
 				colors: {
 					accentcolor: res.n_accentcolor || '#000',
@@ -80,7 +78,6 @@ function setTheme(theme) {
 	}
 	currentTheme = theme;
 	getThemeSettings( theme );
-	browser.theme.update(themes[theme]);
 }
 
 function checkTime() {
@@ -104,3 +101,4 @@ checkTime();
 // Set up an alarm to check this regularly.
 browser.alarms.onAlarm.addListener(checkTime);
 browser.alarms.create('checkTime', {periodInMinutes: 5});
+
