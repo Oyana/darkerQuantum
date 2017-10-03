@@ -1,4 +1,4 @@
-function saveOptions(e) {
+saveOptions = e =>{
 	browser.storage.sync.set({
 		d_accentcolor: document.querySelector("#d_accentcolor").value,
 		d_textcolor: document.querySelector("#d_textcolor").value,
@@ -10,16 +10,16 @@ function saveOptions(e) {
 	e.preventDefault();
 }
 
-function restoreOptions() {
-	var getdata = browser.storage.sync.get(['d_accentcolor','d_textcolor','n_accentcolor','n_textcolor']);
-	getdata.then((res) => {
+restoreOptions = () => {
+	var getdata = browser.storage.sync.get();
+	getdata.then( (res) => {
 		document.querySelector("#d_accentcolor").value = res.d_accentcolor || '#000';
 		document.querySelector("#d_textcolor").value = res.d_textcolor || '#fff';
 		document.querySelector("#d_bgURL").value = res.d_bgURL || '../img/sun.jpg';
 		document.querySelector("#n_accentcolor").value = res.n_accentcolor || '#000';
 		document.querySelector("#n_textcolor").value = res.n_textcolor || '#fff';
 		document.querySelector("#n_bgURL").value = res.n_bgURL || '../img/moon.jpg';
-	});
+	} );
 }
 
 document.addEventListener('DOMContentLoaded', restoreOptions);
