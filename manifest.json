@@ -1,0 +1,41 @@
+{
+	"description": "An example dynamic theme",
+	"homepage_url": "https://github.com/Oyana/darkerQuantum",
+	"manifest_version": 2,
+	"name": "darkerQuantum",
+	"browser_action": {
+		"default_title": "darkerQuantum option"
+	},
+	"icons": {
+		"48": "img/ico.png"
+	},
+	"permissions": [
+		"alarms",
+		"tabs",
+		"topSites",
+		"storage",
+		"theme"
+	],
+	"background": {
+		"scripts": ["js/background.js"]
+	},
+	"chrome_url_overrides": {
+		"newtab": "html/nwetab.html"
+	},
+	"options_ui": {
+		"page": "html/options.html",
+		"browser_style": true
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://*.mozilla.org/*"],
+			"js": ["borderify.js"]
+		}
+	],
+	"applications": {
+		"gecko": {
+			"id": "favourite-colour-examples@mozilla.org"
+		}
+	},
+	"version": "0.0.1"
+}
