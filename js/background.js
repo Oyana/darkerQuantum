@@ -68,22 +68,29 @@ Toggle CSS: based on the current title, insert or remove the CSS.
 Update the page action's title and icon to reflect its state.
 */
 toggleCSS = tab => {
-	if ( tab.url.indexOf("github.com") > -1 )
-	{
-		const CSS = "../css/github.css";
-		browser.tabs.insertCSS( {file: CSS} );
-	}
-	else if ( tab.url.indexOf("google.") > -1 )
-	{
-		const CSS = "../css/google.css";
-		browser.tabs.insertCSS( {file: CSS} );
-	}
-	else if ( tab.url.indexOf("about:newtab") > -1 )
-	{
-		const CSS = "../css/google.css";
-		browser.tabs.insertCSS( {file: CSS} );
-	}
-	console.log( tab.url );
+	var getdata = browser.storage.sync.get();
+	getdata.then( ( res ) => {
+		if ( tab.url.indexOf("github.com") > -1 && res.o_github == 1 )
+		{
+			browser.tabs.insertCSS( {file: "../css/github.css"} );
+		}
+		else if ( tab.url.indexOf("google.") > -1 && res.o_google == 1 )
+		{
+			browser.tabs.insertCSS( {file: "../css/google.css"} );
+		}
+		else if ( tab.url.indexOf("nicovideo.jp") > -1 && res.o_google == 1 )
+		{
+			browser.tabs.insertCSS( {file: "../css/nicovideo.css"} );
+		}
+		else if ( tab.url.indexOf("stackoverflow.com") > -1 && res.o_stackoverflow == 1 )
+		{
+			browser.tabs.insertCSS( {file: "../css/stackoverflow.css"} );
+		}
+		else if ( tab.url.indexOf("wikipedia.org") > -1 && res.o_wikipedia == 1 )
+		{
+			browser.tabs.insertCSS( {file: "../css/wikipedia.css"} );
+		}
+	});
 }
 
 /*
