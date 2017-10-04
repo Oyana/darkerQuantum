@@ -78,6 +78,11 @@ toggleCSS = tab => {
 		const CSS = "../css/google.css";
 		browser.tabs.insertCSS( {file: CSS} );
 	}
+	else if ( tab.url.indexOf("about:newtab") > -1 )
+	{
+		const CSS = "../css/google.css";
+		browser.tabs.insertCSS( {file: CSS} );
+	}
 	console.log( tab.url );
 }
 
