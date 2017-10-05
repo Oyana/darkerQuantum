@@ -70,26 +70,11 @@ Update the page action's title and icon to reflect its state.
 toggleCSS = tab => {
 	var getdata = browser.storage.sync.get();
 	getdata.then( ( res ) => {
-		if ( tab.url.indexOf("github.com") > -1 && res.o_github == 1 )
-		{
-			browser.tabs.insertCSS( {file: "../css/github.css"} );
-		}
-		else if ( tab.url.indexOf("google.") > -1 && res.o_google == 1 )
-		{
-			browser.tabs.insertCSS( {file: "../css/google.css"} );
-		}
-		else if ( tab.url.indexOf("nicovideo.jp") > -1 && res.o_google == 1 )
-		{
-			browser.tabs.insertCSS( {file: "../css/nicovideo.css"} );
-		}
-		else if ( tab.url.indexOf("stackoverflow.com") > -1 && res.o_stackoverflow == 1 )
-		{
-			browser.tabs.insertCSS( {file: "../css/stackoverflow.css"} );
-		}
-		else if ( tab.url.indexOf("wikipedia.org") > -1 && res.o_wikipedia == 1 )
-		{
-			browser.tabs.insertCSS( {file: "../css/wikipedia.css"} );
-		}
+		applySkin( tab, ['github.com'], 'github', res.o_github );
+		applySkin( tab, ['www.google.', 'encrypted.google.'], 'google', res.o_google );
+		applySkin( tab, ['nicovideo.jp'], 'nicovideo', res.o_nicovideo );
+		applySkin( tab, ['stackoverflow.com'], 'stackoverflow', res.o_stackoverflow );
+		applySkin( tab, ['wikipedia.org'], 'stackoverflow', res.o_wikipedia );
 	});
 }
 
@@ -108,3 +93,15 @@ Each time a tab is updated, reset the page action for that tab.
 browser.tabs.onUpdated.addListener( (id, changeInfo, tab) => {
 	toggleCSS(tab);
 });
+
+applySkin = ( tab, matchedDomains, cssKey, isAuthorized = false, ...exclude) => {
+	if ( isAuthorized == true )
+	{
+		matchedDomains.forEach( matchedDomain => {
+			if ( tab.url.indexOf( matchedDomain ) > -1 )
+			{
+				browser.tabs.insertCSS( {file: "../css/" + cssKey + ".css"} );
+			}
+		});
+	}
+}

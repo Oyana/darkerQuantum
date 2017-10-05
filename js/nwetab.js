@@ -10,6 +10,7 @@ browser.topSites.get()
 		let ul = document.createElement('ul');
 		ul.className = 'list-group';
 		for (let site of sites) {
+			console.log(site);
 			let li = document.createElement('li');
 			li.className = 'list-group-item';
 			let a = document.createElement('a');
