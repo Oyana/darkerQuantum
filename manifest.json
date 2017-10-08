@@ -1,31 +1,32 @@
 {
+	"manifest_version": 2,
 	"name": "darkerQuantum",
 	"author": "Golga",
 	"applications": {
 		"gecko": {
-			"id": "darkerQuantum@oyana.org"
+			"id": "darkerQuantum@oyana.org",
+			"strict_min_version": "54.0a1"
 		}
 	},
-	"description": "Firefox Quantum darker theme for UI & website",
+	"description": "Firefox Quantum darker theme for UI & website.\n\r<br> test ",
 	"homepage_url": "https://github.com/Oyana/darkerQuantum",
-	"manifest_version": 2,
-	"version": "0.0.4",
+	"version": "0.1.0",
 	"browser_action": {
-		"default_icon": "img/ico.png",
-		"default_title": "darkerQuantum option"
+		"default_icon": "img/icon-128.png",
+		"default_title": "darkerQuantumSettings"
 	},
 	"icons": {
-		"48": "img/ico.png"
+		"16": "img/icon-16.png",
+		"32": "img/icon-32.png",
+		"48": "img/icon-48.png",
+		"64": "img/icon-64.png",
+		"96": "img/icon-96.png",
+		"128": "img/icon-128.png"
 	},
 	"permissions": [
-		"*://*.google.jp/*",
-		"*://*.google.be/*",
-		"*://*.google.fr/*",
-		"*://*.google.com/*",
-		"*://*.github.com/*",
-		"*://*.stackoverflow.com/*",
-		"*://*.nicovideo.jp/*",
-		"*://*.wikipedia.org/*",
+		"http://*/*",
+		"https://*/*",
+		"<all_urls>",
 		"alarms",
 		"activeTab",
 		"tabs",

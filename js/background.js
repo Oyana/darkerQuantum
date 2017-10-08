@@ -7,11 +7,11 @@ applyThemeSettings = theme => {
 		{
 			browser.theme.update({
 				images: {
-					headerURL: res.t_bgURL || '../img/moon.jpg',
+					headerURL: res.o_bgURL || '../img/grey.png',
 				},
 				colors: {
-					accentcolor: res.t_accentcolor || '#000',
-					textcolor: res.t_textcolor || '#fff',
+					accentcolor: res.o_accentcolor || '#000',
+					textcolor: res.o_textcolor || '#fff',
 				}
 			});
 		}

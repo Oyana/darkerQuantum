@@ -1,9 +1,9 @@
 saveOptions = e =>{
 	browser.storage.sync.set({
 		o_cssT: document.querySelector(".o_cssT:checked").value,
-		t_accentcolor: document.querySelector("#t_accentcolor").value,
-		t_textcolor: document.querySelector("#t_textcolor").value,
-		t_bgURL: document.querySelector("#t_bgURL").value,
+		o_accentcolor: document.querySelector(".o_accentcolor").value,
+		o_textcolor: document.querySelector(".o_textcolor").value,
+		o_bgURL: document.querySelector(".o_bgURL").value,
 
 		o_cssW: document.querySelector(".o_cssW:checked").value,
 		o_github: document.querySelector(".o_github:checked").value,
@@ -19,9 +19,9 @@ restoreOptions = () => {
 	var getdata = browser.storage.sync.get();
 	getdata.then( (res) => {
 		aplyValue( ".o_cssT", res.o_cssT, false, true );
-		aplyValue( "#t_accentcolor", res.t_accentcolor, '#000' );
-		aplyValue( "#t_textcolor", res.t_textcolor, '#fff' );
-		aplyValue( "#t_bgURL", res.t_bgURL, '../img/moon.jpg' );
+		aplyValue( ".o_accentcolor", res.o_accentcolor, '#000' );
+		aplyValue( ".o_textcolor", res.o_textcolor, '#fff' );
+		aplyValue( ".o_bgURL", res.o_bgURL, '../img/grey.png' );
 
 		aplyValue( ".o_cssW", res.o_cssW, false, true );
 		aplyValue( ".o_github", res.o_github, false, true );

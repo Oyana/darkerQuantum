@@ -1,2 +1,2 @@
 # darkerQuantum
-Firefox Quantum darker theme for UI &amp; website
+Firefox Quantum darker theme for UI & website.
