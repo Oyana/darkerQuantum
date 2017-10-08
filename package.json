@@ -1,0 +1,22 @@
+{
+  "name": "darkerQuantum",
+  "version": "0.1.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+	"test": "test"
+  },
+  "repository": {
+	"type": "git",
+	"url": "git+https://github.com/Oyana/darkerQuantum"
+  },
+  "author": "Bulko",
+  "license": "ISC",
+  "bugs": {
+	"url": "https://github.com/Oyana/darkerQuantum/issues"
+  },
+  "homepage": "https://github.com/Oyana/darkerQuantum#readme",
+  "devDependencies": {
+	"gulp-oyana": "^0.6.1"
+  }
+}

@@ -1,5 +1,7 @@
 # ignore all files starting with .
 .*
+css/*
+jsMin/*
 
 # root track
 !.gitignore
