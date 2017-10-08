@@ -51,6 +51,18 @@ checkTime = () => {
 		setTheme('night');
 	}
 }
+
+isNight = () => {
+	const date = new Date();
+	const hours = date.getHours();
+	// Will set the sun theme between 8am and 8pm.
+	if ( ( hours > 8 ) && ( hours < 20 ) )
+	{
+		return false;
+	}
+	return true;
+}
+
 handleClick = () =>{
 	browser.runtime.openOptionsPage();
 }
@@ -70,12 +82,25 @@ Update the page action's title and icon to reflect its state.
 toggleCSS = tab => {
 	var getdata = browser.storage.sync.get();
 	getdata.then( ( res ) => {
-		applySkin( tab, ['github.com'], 'github', res.o_github );
-		applySkin( tab, ['www.google.', 'encrypted.google.'], 'google', res.o_google );
-		applySkin( tab, ['nicovideo.jp'], 'nicovideo', res.o_nicovideo );
-		applySkin( tab, ['stackoverflow.com'], 'stackoverflow', res.o_stackoverflow );
-		applySkin( tab, ['wikipedia.org'], 'stackoverflow', res.o_wikipedia );
+		applySkin( tab, ['github.com'], 'github', isAuthorized( res.o_cssW, res.o_github ) );
+		applySkin( tab, ['www.google.', 'encrypted.google.'], 'google', isAuthorized( res.o_cssW, res.o_google ) );
+		applySkin( tab, ['nicovideo.jp'], 'nicovideo', isAuthorized( res.o_cssW, res.o_nicovideo ) );
+		applySkin( tab, ['stackoverflow.com'], 'stackoverflow', isAuthorized( res.o_cssW, res.o_stackoverflow ) );
+		applySkin( tab, ['wikipedia.org'], 'wikipedia', isAuthorized( res.o_cssW, res.o_wikipedia ) );
 	});
+}
+
+isAuthorized = ( globalAuth, localAuth ) =>{
+	let authorize = false;
+	if ( globalAuth == 1 && localAuth == 1 )
+	{
+		authorize = true;
+	}
+	else if ( localAuth == 1 && globalAuth == 2 && isNight() )
+	{
+		authorize = true;
+	}
+	return authorize;
 }
 
 /*
@@ -95,6 +120,8 @@ browser.tabs.onUpdated.addListener( (id, changeInfo, tab) => {
 });
 
 applySkin = ( tab, matchedDomains, cssKey, isAuthorized = false, ...exclude) => {
+	console.log( cssKey );
+	console.log( isAuthorized );
 	if ( isAuthorized == true )
 	{
 		matchedDomains.forEach( matchedDomain => {

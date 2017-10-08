@@ -6,6 +6,7 @@ saveOptions = e =>{
 		n_accentcolor: document.querySelector("#n_accentcolor").value,
 		n_textcolor: document.querySelector("#n_textcolor").value,
 		n_bgURL: document.querySelector("#n_bgURL").value,
+		o_cssW: document.querySelector(".o_cssW:checked").value,
 		o_github: document.querySelector(".o_github:checked").value,
 		o_google: document.querySelector(".o_google:checked").value,
 		o_nicovideo: document.querySelector(".o_nicovideo:checked").value,
@@ -24,6 +25,7 @@ restoreOptions = () => {
 		aplyValue( "#n_accentcolor", res.n_accentcolor, '#000' );
 		aplyValue( "#n_textcolor", res.n_textcolor, '#fff' );
 		aplyValue( "#n_bgURL", res.n_bgURL, '../img/moon.jpg' );
+		aplyValue( ".o_cssW", res.o_cssW, false, true );
 		aplyValue( ".o_github", res.o_github, false, true );
 		aplyValue( ".o_google", res.o_google, false, true );
 		aplyValue( ".o_nicovideo", res.o_nicovideo, false, true );
@@ -39,9 +41,13 @@ aplyValue = ( selector, inptValue, inptDefaultValue = false, isRadio = false ) =
 		{
 			document.querySelector( selector + ".disable").checked = true;
 		}
-		else
+		else if ( inptValue == 1 )
 		{
 			document.querySelector( selector + ".enable").checked = true;
+		}
+		else
+		{
+			document.querySelector( selector + ".atnight").checked = true;
 		}
 	}
 	else

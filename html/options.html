@@ -7,35 +7,40 @@
 <body>
 	<form>
 		<h2>Advanced settings</h2>
-		<hr />
-		<h4>Allow website style override</h4>
-		<p>
-			<label><a href="https://github.com/" >Github.com</a></label>
-			<input type="radio" class="o_github enable" name="o_github" value="1" />Oui
-			<input type="radio" class="o_github disable" name="o_github" value="0" />Non
-		</p>
-		<p>
-			<label><a href="https://www.google.com" >Google.*</a></label>
-			<input type="radio" class="o_google enable" name="o_google" value="1" />Oui
-			<input type="radio" class="o_google disable" name="o_google" value="0" />Non
-		</p>
-		<p>
-			<label><a href="http://www.nicovideo.jp" >Nicovideo.jp</a></label>
-			<input type="radio" class="o_nicovideo enable" name="o_nicovideo" value="1" />Oui
-			<input type="radio" class="o_nicovideo disable" name="o_nicovideo" value="0" />Non
-		</p>
-		<p>
-			<label><a href="https://stackoverflow.com/" >StackOverflow.com</a></label>
-			<input type="radio" class="o_stackoverflow enable" name="o_stackoverflow" value="1" />Oui
-			<input type="radio" class="o_stackoverflow disable" name="o_stackoverflow" value="0" />Non
-		</p>
-		<p>
-			<label><a href="https://www.wikipedia.org/" >Wikipedia.org</a></label>
-			<input type="radio" class="o_wikipedia enable" name="o_wikipedia" value="1" />Oui
-			<input type="radio" class="o_wikipedia disable" name="o_wikipedia" value="0" />Non
-		</p>
-		<hr />
-		<h4>Day param</h4>
+		<div class="form-group">
+			<h4>Allow website style override</h4>
+			<input type="radio" class="o_cssW atnight" name="o_cssW" value="2" /> At night
+			<input type="radio" class="o_cssW enable" name="o_cssW" value="1" /> Allways
+			<input type="radio" class="o_cssW disable" name="o_cssW" value="0" /> Never
+		</div class="form-group">
+		<div class="toggle-advanced">
+			<p>
+				<label><a href="https://github.com/" >Github.com</a></label>
+				<input type="radio" class="o_github enable" name="o_github" value="1" /> Yes
+				<input type="radio" class="o_github disable" name="o_github" value="0" /> No
+			</p>
+			<p>
+				<label><a href="https://www.google.com" >Google.*</a></label>
+				<input type="radio" class="o_google enable" name="o_google" value="1" /> Yes
+				<input type="radio" class="o_google disable" name="o_google" value="0" /> No
+			</p>
+			<p>
+				<label><a href="http://www.nicovideo.jp" >Nicovideo.jp</a></label>
+				<input type="radio" class="o_nicovideo enable" name="o_nicovideo" value="1" /> Yes
+				<input type="radio" class="o_nicovideo disable" name="o_nicovideo" value="0" /> No
+			</p>
+			<p>
+				<label><a href="https://stackoverflow.com/" >StackOverflow.com</a></label>
+				<input type="radio" class="o_stackoverflow enable" name="o_stackoverflow" value="1" /> Yes
+				<input type="radio" class="o_stackoverflow disable" name="o_stackoverflow" value="0" /> No
+			</p>
+			<p>
+				<label><a href="https://www.wikipedia.org/" >Wikipedia.org</a></label>
+				<input type="radio" class="o_wikipedia enable" name="o_wikipedia" value="1" /> Yes
+				<input type="radio" class="o_wikipedia disable" name="o_wikipedia" value="0" /> No
+			</p>
+		</div>
+		<h4>Allow theme style override</h4>
 		<p>
 			<label>accentcolor</label>
 			<input type="text" id="d_accentcolor" />

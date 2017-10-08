@@ -39,8 +39,5 @@
 	"options_ui": {
 		"page": "html/options.html",
 		"browser_style": true
-	},
-	"chrome_url_overrides": {
-		"newtab": "html/nwetab.html"
 	}
 }
