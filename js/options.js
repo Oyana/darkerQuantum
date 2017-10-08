@@ -11,6 +11,9 @@ saveOptions = e =>{
 		o_nicovideo: document.querySelector(".o_nicovideo:checked").value,
 		o_stackoverflow: document.querySelector(".o_stackoverflow:checked").value,
 		o_wikipedia: document.querySelector(".o_wikipedia:checked").value,
+
+		o_nightStart: document.querySelector(".o_nightStart").value,
+		o_nightEnd: document.querySelector(".o_nightEnd").value,
 	});
 	e.preventDefault();
 }
@@ -29,6 +32,9 @@ restoreOptions = () => {
 		aplyValue( ".o_nicovideo", res.o_nicovideo, false, true );
 		aplyValue( ".o_stackoverflow", res.o_stackoverflow, false, true );
 		aplyValue( ".o_wikipedia", res.o_wikipedia, false, true );
+
+		aplyValue( ".o_nightStart", res.o_nightStart, 20 );
+		aplyValue( ".o_nightEnd", res.o_nightEnd, 8 );
 	} );
 }
 
@@ -60,5 +66,5 @@ toggle1 = () =>{
 
 document.addEventListener('DOMContentLoaded', restoreOptions);
 document.querySelector("form").addEventListener("submit", saveOptions);
-document.querySelector("form").addEventListener("submit", applyThemeSettings);
+document.querySelector("form").addEventListener("submit", refreshSetting);
 document.querySelector("#toggle-1").addEventListener("click", toggle1);

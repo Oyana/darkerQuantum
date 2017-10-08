@@ -8,7 +8,7 @@
 			"strict_min_version": "54.0a1"
 		}
 	},
-	"description": "Firefox Quantum darker theme for UI & website.\n\r<br> test ",
+	"description": "Firefox Quantum darker theme for UI & website.\n\r ",
 	"homepage_url": "https://github.com/Oyana/darkerQuantum",
 	"version": "0.1.0",
 	"browser_action": {
