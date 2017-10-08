@@ -1,6 +1,7 @@
-var currentTheme = '';
+var gettingAllTabs = browser.tabs.query({});
 var currentSettings = '';
 
+// check if is night time based on darkerQuantum settings.
 isNight = () => {
 	const date = new Date();
 	const hours = date.getHours();
@@ -11,6 +12,7 @@ isNight = () => {
 	return true;
 }
 
+// check if action is athorized by darkerQuantum settings.
 isAuthorized = ( globalAuth, localAuth = 1 ) =>{
 	let authorize = false;
 	if ( globalAuth == 1 && localAuth == 1 )
@@ -24,6 +26,7 @@ isAuthorized = ( globalAuth, localAuth = 1 ) =>{
 	return authorize;
 }
 
+// apply theme if darkerQuantum settings allow it.
 applyThemeSettings = theme => {
 	if( isAuthorized( currentSettings.o_cssT ) )
 	{
@@ -39,26 +42,6 @@ applyThemeSettings = theme => {
 	}
 }
 
-refreshSetting = () => {
-	var getdata = browser.storage.sync.get();
-	getdata.then( ( res ) => {
-		currentSettings = res;
-		applyThemeSettings();
-	});
-}
-
-handleClick = () =>{
-	browser.runtime.openOptionsPage();
-}
-
-browser.browserAction.onClicked.addListener(handleClick);
-// On start up, check the time to see what theme to show.
-applyThemeSettings();
-
-// Set up an alarm to check this regularly.
-browser.alarms.onAlarm.addListener(applyThemeSettings);
-browser.alarms.create('applyThemeSettings', {periodInMinutes: 5});
-
 /*
 Toggle CSS: based on the current title, insert or remove the CSS.
 Update the page action's title and icon to reflect its state.
@@ -71,22 +54,7 @@ toggleCSS = tab => {
 	applySkin( tab, ['wikipedia.org'], 'wikipedia', isAuthorized( currentSettings.o_cssW, currentSettings.o_wikipedia ) );
 }
 
-/*
-When first loaded, initialize the page action for all tabs.
-*/
-var gettingAllTabs = browser.tabs.query({});
-gettingAllTabs.then((tabs) => {
-	for (let tab of tabs) {
-		toggleCSS(tab);
-	}
-});
-/*
-Each time a tab is updated, reset the page action for that tab.
-*/
-browser.tabs.onUpdated.addListener( (id, changeInfo, tab) => {
-	toggleCSS(tab);
-});
-
+// apply css to a specific tab if darkerQuantum settings allow it.
 applySkin = ( tab, matchedDomains, cssKey, isAuthorized = false, ...exclude) => {
 	if ( isAuthorized == true )
 	{
@@ -99,4 +67,37 @@ applySkin = ( tab, matchedDomains, cssKey, isAuthorized = false, ...exclude) => 
 	}
 }
 
+// reload darkerQuantum settings & apply it to theme.
+refreshSetting = () => {
+	var getdata = browser.storage.sync.get();
+	getdata.then( ( res ) => {
+		currentSettings = res;
+		applyThemeSettings();
+	});
+}
+
+handleClick = () =>{
+	browser.runtime.openOptionsPage();
+}
+
+// handle button click to load settings.
+browser.browserAction.onClicked.addListener(handleClick);
+
+// Set up an alarm to check this regularly.
+browser.alarms.onAlarm.addListener(applyThemeSettings);
+browser.alarms.create('applyThemeSettings', {periodInMinutes: 5});
+
+// When first loaded, initialize the page action for all tabs.
+gettingAllTabs.then((tabs) => {
+	for (let tab of tabs) {
+		toggleCSS(tab);
+	}
+});
+
+// Each time a tab is updated, reset the page action for that tab.
+browser.tabs.onUpdated.addListener( (id, changeInfo, tab) => {
+	toggleCSS(tab);
+});
+
+// When first loaded, initialize darkerQuantum settings.
 refreshSetting();

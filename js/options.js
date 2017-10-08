@@ -1,3 +1,4 @@
+// store settings from option page (retrived from input value).
 saveOptions = e =>{
 	browser.storage.sync.set({
 		o_cssT: document.querySelector(".o_cssT:checked").value,
@@ -18,6 +19,7 @@ saveOptions = e =>{
 	e.preventDefault();
 }
 
+// Load option value into settings form.
 restoreOptions = () => {
 	var getdata = browser.storage.sync.get();
 	getdata.then( (res) => {
@@ -38,6 +40,7 @@ restoreOptions = () => {
 	} );
 }
 
+// restoreOptions hellper (aply value to a specific selector)
 aplyValue = ( selector, inptValue, inptDefaultValue = false, isRadio = false ) => {
 	if ( isRadio == true )
 	{
@@ -60,9 +63,11 @@ aplyValue = ( selector, inptValue, inptDefaultValue = false, isRadio = false ) =
 	}
 }
 
+/*@TODO*/
 toggle1 = () =>{
 	document.querySelector( "#advanced-1" ).css("display","block");
 }
+/*@TODO END*/
 
 document.addEventListener('DOMContentLoaded', restoreOptions);
 document.querySelector("form").addEventListener("submit", saveOptions);
