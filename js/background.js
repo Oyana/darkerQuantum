@@ -1,55 +1,21 @@
 var currentTheme = '';
 
-getThemeSettings = theme => {
+applyThemeSettings = theme => {
 	var getdata = browser.storage.sync.get();
 	getdata.then((res) => {
-		if ( theme == "day" )
+		if( isAuthorized( res.o_cssT ) )
 		{
 			browser.theme.update({
 				images: {
-					headerURL: res.d_bgURL || '../img/sun.jpg',
+					headerURL: res.t_bgURL || '../img/moon.jpg',
 				},
 				colors: {
-					accentcolor: res.d_accentcolor || '#000',
-					textcolor: res.d_textcolor || '#fff',
-				}
-			});
-		}
-		else
-		{
-			browser.theme.update({
-				images: {
-					headerURL: res.n_bgURL || '../img/moon.jpg',
-				},
-				colors: {
-					accentcolor: res.n_accentcolor || '#000',
-					textcolor: res.n_textcolor || '#fff',
+					accentcolor: res.t_accentcolor || '#000',
+					textcolor: res.t_textcolor || '#fff',
 				}
 			});
 		}
 	});
-}
-
-setTheme = theme => {
-	if (currentTheme !== theme)
-	{
-		currentTheme = theme;
-		getThemeSettings( theme );
-	}
-}
-
-checkTime = () => {
-	const date = new Date();
-	const hours = date.getHours();
-	// Will set the sun theme between 8am and 8pm.
-	if ( (hours > 8) && (hours < 20) )
-	{
-		setTheme('day');
-	}
-	else
-	{
-		setTheme('night');
-	}
 }
 
 isNight = () => {
@@ -69,11 +35,11 @@ handleClick = () =>{
 
 browser.browserAction.onClicked.addListener(handleClick);
 // On start up, check the time to see what theme to show.
-checkTime();
+applyThemeSettings();
 
 // Set up an alarm to check this regularly.
-browser.alarms.onAlarm.addListener(checkTime);
-browser.alarms.create('checkTime', {periodInMinutes: 5});
+browser.alarms.onAlarm.addListener(applyThemeSettings);
+browser.alarms.create('applyThemeSettings', {periodInMinutes: 5});
 
 /*
 Toggle CSS: based on the current title, insert or remove the CSS.
@@ -90,7 +56,7 @@ toggleCSS = tab => {
 	});
 }
 
-isAuthorized = ( globalAuth, localAuth ) =>{
+isAuthorized = ( globalAuth, localAuth = 1 ) =>{
 	let authorize = false;
 	if ( globalAuth == 1 && localAuth == 1 )
 	{
@@ -120,8 +86,6 @@ browser.tabs.onUpdated.addListener( (id, changeInfo, tab) => {
 });
 
 applySkin = ( tab, matchedDomains, cssKey, isAuthorized = false, ...exclude) => {
-	console.log( cssKey );
-	console.log( isAuthorized );
 	if ( isAuthorized == true )
 	{
 		matchedDomains.forEach( matchedDomain => {

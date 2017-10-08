@@ -4,6 +4,14 @@
 	<head>
 		<meta charset="utf-8">
 	</head>
+	<style>
+	/*.toggle-advanced{
+		display: none;
+	}*/
+	.form-group h4{
+		display: inline-block;
+	}
+	</style>
 <body>
 	<form>
 		<h2>Advanced settings</h2>
@@ -13,7 +21,8 @@
 			<input type="radio" class="o_cssW enable" name="o_cssW" value="1" /> Allways
 			<input type="radio" class="o_cssW disable" name="o_cssW" value="0" /> Never
 		</div class="form-group">
-		<div class="toggle-advanced">
+		<button class="more-option" id="toggle-1">More option</button>
+		<div class="toggle-advanced" id="advanced-1">
 			<p>
 				<label><a href="https://github.com/" >Github.com</a></label>
 				<input type="radio" class="o_github enable" name="o_github" value="1" /> Yes
@@ -40,33 +49,29 @@
 				<input type="radio" class="o_wikipedia disable" name="o_wikipedia" value="0" /> No
 			</p>
 		</div>
-		<h4>Allow theme style override</h4>
-		<p>
-			<label>accentcolor</label>
-			<input type="text" id="d_accentcolor" />
-		</p>
-		<p>
-			<label>textcolor</label>
-			<input type="text" id="d_textcolor" />
-		</p>
-		<p>
-			<label>bgURL</label>
-			<input type="text" id="d_bgURL" />
-		</p>
+		<div class="form-group">
+			<h4>Allow theme override</h4>
+			<input type="radio" class="o_cssT atnight" name="o_cssT" value="2" /> At night
+			<input type="radio" class="o_cssT enable" name="o_cssT" value="1" /> Allways
+			<input type="radio" class="o_cssT disable" name="o_cssT" value="0" /> Never
+		</div class="form-group">
+		<button class="more-option" id="toggle-2">More option</button>
+		<div class="toggle-advanced" id="advanced-2">
+			<p>
+				<label>Accent color</label>
+				<input type="text" id="t_accentcolor" />
+			</p>
+			<p>
+				<label>Text color</label>
+				<input type="text" id="t_textcolor" />
+			</p>
+			<p>
+				<label>Background</label>
+				<input type="text" id="t_bgURL" />
+				<i>base 64 or local</i>
+			</p>
+		</div>
 		<hr />
-		<h4>Night param</h4>
-		<p>
-			<label>accentcolor</label>
-			<input type="text" id="n_accentcolor" />
-		</p>
-		<p>
-			<label>textcolor</label>
-			<input type="text" id="n_textcolor" />
-		</p>
-		<p>
-			<label>bgURL</label>
-			<input type="text" id="n_bgURL" />
-		</p>
 		<button type="submit">Save</button>
 		<i>Use CTRL + F5 to reload theme after settings update (affter saving).</i>
 	</form>
