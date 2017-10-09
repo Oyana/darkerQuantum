@@ -63,13 +63,13 @@ aplyValue = ( selector, inptValue, inptDefaultValue = false, isRadio = false ) =
 	}
 }
 
-/*@TODO*/
-toggle1 = () =>{
-	document.querySelector( "#advanced-1" ).css("display","block");
+toggle = selector =>{
+	document.querySelector( selector ).classList.toggle('active');
 }
-/*@TODO END*/
+
 
 document.addEventListener('DOMContentLoaded', restoreOptions);
 document.querySelector("form").addEventListener("submit", saveOptions);
 document.querySelector("form").addEventListener("submit", refreshSetting);
-document.querySelector("#toggle-1").addEventListener("click", toggle1);
+document.querySelector("#toggle-1").addEventListener("click", () => { toggle('#advanced-1'); } );
+document.querySelector("#toggle-2").addEventListener("click", () => { toggle('#advanced-2'); } );

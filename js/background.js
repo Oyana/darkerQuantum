@@ -61,8 +61,13 @@ applySkin = ( tab, matchedDomains, cssKey, isAuthorized = false, ...exclude) => 
 		matchedDomains.forEach( matchedDomain => {
 			if ( tab.url.indexOf( matchedDomain ) > -1 )
 			{
-				console.log("css loaded");
-				browser.tabs.insertCSS( {file: "../css/" + cssKey + ".css"} );
+				browser.tabs.insertCSS( {
+					file: "../css/" + cssKey + ".css",
+					allFrames: true
+				},
+				() => {
+						console.log("CSS loaded on" + cssKey + "🦄" );
+				});
 			}
 		});
 	}
@@ -73,7 +78,6 @@ refreshSetting = () => {
 	var getdata = browser.storage.sync.get();
 	getdata.then( ( res ) => {
 		currentSettings = res;
-		console.log(currentSettings);
 		applyThemeSettings();
 	});
 }

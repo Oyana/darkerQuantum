@@ -5,9 +5,12 @@
 		<meta charset="utf-8">
 	</head>
 	<style>
-	/*.toggle-advanced{
+	.toggle-advanced{
 		display: none;
-	}*/
+	}
+	.toggle-advanced.active{
+		display: block;
+	}
 	.form-group h4{
 		display: inline-block;
 	}
@@ -21,7 +24,7 @@
 			<input type="radio" class="o_cssW enable" name="o_cssW" value="1" /> Allways
 			<input type="radio" class="o_cssW disable" name="o_cssW" value="0" /> Never
 		</div class="form-group">
-		<!-- <button class="more-option" id="toggle-1">More option</button> -->
+		<button class="more-option" id="toggle-1">More option</button>
 		<div class="toggle-advanced" id="advanced-1">
 			<p>
 				<label><a href="https://github.com/" >Github.com</a></label>
@@ -55,7 +58,7 @@
 			<input type="radio" class="o_cssT enable" name="o_cssT" value="1" /> Allways
 			<input type="radio" class="o_cssT disable" name="o_cssT" value="0" /> Never
 		</div class="form-group">
-		<!-- <button class="more-option" id="toggle-2">More option</button> -->
+		<button class="more-option" id="toggle-2">More option</button>
 		<div class="toggle-advanced" id="advanced-2">
 			<p>
 				<label>Accent color</label>
