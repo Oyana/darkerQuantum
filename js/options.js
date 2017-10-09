@@ -26,7 +26,7 @@ restoreOptions = () => {
 		aplyValue( ".o_cssT", res.o_cssT, false, true );
 		aplyValue( ".o_accentcolor", res.o_accentcolor, '#000' );
 		aplyValue( ".o_textcolor", res.o_textcolor, '#fff' );
-		aplyValue( ".o_bgURL", res.o_bgURL, '../img/grey.png' );
+		aplyValue( ".o_bgURL", res.o_bgURL, '../img/bg/grey.png' );
 
 		aplyValue( ".o_cssW", res.o_cssW, false, true );
 		aplyValue( ".o_github", res.o_github, false, true );
