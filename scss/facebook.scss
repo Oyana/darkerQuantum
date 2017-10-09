@@ -208,46 +208,46 @@
 /*-------------------- photos & icons --------------------*/
 	#fbProfileCover .coverWrap .photo, ._6li .scaledImageFitWidth, ._4on7._3mk2.img, ._46-h._7lj img, .uiScaledImageContainer._7lj img
 	{
-		-webkit-filter: blur(var(--photo-blur, 0px));
+		// -webkit-filter: blur(var(--photo-blur, 0px));
 		filter: blur(var(--photo-blur, 0px));
 	}
 
 	.img
 	{
 		border-radius: 2px;
-		-webkit-filter: brightness(var(--photo-brightness, 100%)) contrast(var(--photo-contrast, 100%));
+		// -webkit-filter: brightness(var(--photo-brightness, 100%)) contrast(var(--photo-contrast, 100%));
 		filter: brightness(var(--photo-brightness, 100%)) contrast(var(--photo-contrast, 100%));
 		transition: 0.3s;
 	}
 
 	._517h i, ._4ld- i, ._3rh8 ._2xme, ._5ymq ._42ft i, .ego_like ._42ft i, ._30yy._4rv6, ._3vqw .uiSearchInput button, ._4kny .uiToggle:not([class~="openToggler"]):not([class~="hasNew"]) a:first-child, ._5lxt, ._2t5t, ._5iwm ._58ak::before, .sp_karesl5COtQ, .sp_P_sQPvHyhCI, ._5pr2.fbChatSidebar div._5qth ._5vmb, ._5pr2 ._3a-4, ._3jyj, ._2fpc, ._55yq, ._4xi2.east a.jewelButton ._2n_9, ._1ll-, ._3olu, ._50-0._50z-, ._ors ._5c9q, ._ors ._5c9_, .fbChatSidebarMessage.error .img, ._2fpd, .fbNub._50mz .funhouse .close, .highlightTab.fbNub._50mz .funhouse .close, .sp_s61CDCts4wH, .sp_A9A7rELNlKu, .sp_BljIt2Dozcz, .sp_VTOzZxaQn41, .sp_KN_GYdTFBXY, ._9h, ._9g, ._9j, ._1_x_:after, ._3cok, .uiSimpleScrollingLoadingIndicator, ._xtv>i, .sp_C9-kVEgHrHd, .sp_67Lm53IJ9Fd.sx_aa2ee2
 	{
-		-webkit-filter: invert(var(--icon-change-full, 100%));
-		filter: invert(var(--icon-change-full, 100%));
+		// -webkit-filter: invert(var(--icon-change-full, 100%));
+		// filter: invert(var(--icon-change-full, 100%));
 	}
 
 	._3k_u, ._5cmh, .uiInputLabelInput .uiInputLabelCheckbox, .sp_8UcP_QP8BQP.sx_32defe, .sp_8UcP_QP8BQP.sx_8f9bf2, ._53ip ._53im ._53io, .sp_THcVdbbIWHH, .sp_-xnz5oBARFC.sx_d37b9f, .sp_-xnz5oBARFC.sx_c868ec, ._5vsj .UFISeenCountIcon, .emoticonsPanel div._5r8f .panelFlyoutArrow, .sp_NwUhNcazzX1, .sp__HAPzIRW-99.sx_b6f5de, .sp__HAPzIRW-99.sx_f02f6d, .sp__HAPzIRW-99.sx_854d12, .sp__HAPzIRW-99.sx_5d73fd, .sp__HAPzIRW-99, .sp__oDy_JT1ZI-, .sp_xMoRlyNrhy1, ._5jr3 ._3s_, ._52bu ._3s_, .sp_9IJBdYFlhG5, ._3s_, .uiTypeaheadView .search.updatedSuggestionRows .selected ._56_f._5dzz, .sp_pv1eAGw_6hS, .sp_JFDfMsJzAnR, ._2l02, .sp_0f49CXzryIJ, a._5bv4::after, ._dus::after, ._1s0, .ie10 ._304e>input:checked+span:before, .webkit ._304e>input:checked+span:before, .ie10 ._55sh>input+span:before, .webkit ._55sh>input+span:before, ._53ip ._53ik ._53io, ._5tuv:before, ._5tuv:after, .sp_Jf1npy_vXR9, .sp_-iEjZgsrWzH, .sp_Sr8o5qGdIkH, ._21f img, .sp_UG6xAwx6S_s, .sp_ZLQ3QAAxbXn.sx_c3e2fd, ._5r5f, ._57gs, .sp_UuRfecYqxmg.sx_9a5d26, .uiCloseButtonSmall:hover, .uiCloseButtonSmall:focus, .uiCloseButtonSmall, .sp_0zLbrKqPOhf, .sp_xOlIFEVne2M, .sp_Z2S2FUU_cP_.sx_2dc717, ._53ik ._558b+._53io, ._1rs .emoticonsPanel .emoteTogglerImg, .sp_JCe37g3qSzR, .uiCloseButton, .sp_GKkFtBlxpsW.sx_1496cf, .fbNubButton:focus:before, .fbNubButton:hover:before, .fbNubButton:after, .sp_gH6P3H6Ql3q.sx_384120, ._1r_9 ._53ik ._53io, .ie10 ._55sg>input+span:before, .webkit ._55sg>input+span:before, ._5pd7, .sp_jva6NplBF2R.sx_95e309
 	{
-		-webkit-filter: invert(var(--icon-change-partly, 82%));
-		filter: invert(var(--icon-change-partly, 82%));
+		// -webkit-filter: invert(var(--icon-change-partly, 82%));
+		// filter: invert(var(--icon-change-partly, 82%));
 	}
 
 	._bxy, ._56_f._5d-1, ._6gb, ._55pi i, ._57ei i, ._1v_j i, ._5vsj .UFIReplyList .UFIPagerIcon, ._2oc8, ._2fug, ._30yy, ._2poo, ._5odt, ._17vc, ._3szp, ._zhp
 	{
-		-webkit-filter: grayscale(var(--icon-change-full, 100%));
-		filter: grayscale(var(--icon-change-full, 100%));
+		// -webkit-filter: grayscale(var(--icon-change-full, 100%));
+		// filter: grayscale(var(--icon-change-full, 100%));
 	}
 
 	.noCount:not([class~="popoverOpen"]) ._59tf, .uiMorePagerLoader img
 	{
-		-webkit-filter: invert(var(--icon-change-full, 100%)) grayscale(var(--icon-change-full, 100%));
-		filter: invert(var(--icon-change-full, 100%)) grayscale(var(--icon-change-full, 100%));
+		// -webkit-filter: invert(var(--icon-change-full, 100%)) grayscale(var(--icon-change-full, 100%));
+		// filter: invert(var(--icon-change-full, 100%)) grayscale(var(--icon-change-full, 100%));
 	}
 
 	._359
 	{
-		-webkit-filter: invert(var(--icon-change-partly, 82%)) grayscale(var(--icon-change-full, 100%));
-		filter: invert(var(--icon-change-partly, 82%)) grayscale(var(--icon-change-full, 100%));
+		// -webkit-filter: invert(var(--icon-change-partly, 82%)) grayscale(var(--icon-change-full, 100%));
+		// filter: invert(var(--icon-change-partly, 82%)) grayscale(var(--icon-change-full, 100%));
 	}
 
 /*[[ro_av]]*/
@@ -313,7 +313,7 @@
 	._1y2l ._4qeb
 	{
 		filter: none;
-		-webkit-filter: none;
+		// -webkit-filter: none;
 	}
 
 /*-------------------- arrows --------------------*/
@@ -497,7 +497,7 @@
 
 	.profilePic.img, ._4bl7._3-91 img
 	{
-		-webkit-filter: none;
+		// -webkit-filter: none;
 		filter: none;
 	}
 
