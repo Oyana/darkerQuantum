@@ -1,0 +1,692 @@
+/* Create by Lofox https://userstyles.org/styles/134518/le-bon-coin-2016-th-me-noir  */
+	/* home */
+
+	html, body, #main
+	{
+		background-color: #111 !important;
+	}
+
+	body, h1, .h1-like, h2, .h2-like
+	{
+		color: #e1e1e1 !important;
+	}
+
+	.box, .box-grey-light, .box-grey-dark    /* bleu */
+	{
+		background-color: #000 !important;
+		border-color: #4183d7 !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	.box-grey-light > .title
+	{
+		background-color: #111 !important;
+		border-color: #4183d7 !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	.mapNav a , .textFooter > a, div.custom-small-hidden > section > div > ul > li > a
+	{
+		color: #4183d7 !important;
+	}
+
+	a:focus
+	{
+		color: #369 !important;
+	}
+
+	a:hover  /* orange */
+	{
+		color: #f56b2a !important;
+		font-weight: bold !important;
+		font-style: italic !important;
+		text-decoration: underline !important;
+	}
+
+	/* head  */
+
+	.headerNav li:hover
+	{
+		background-color: #FFF !important;
+	}
+
+
+		/* home foot  */
+
+	.footerCategories
+	{
+		background-color: #111 !important;
+		border-top-color: #f56b2a !important;
+		border-top-style: solid !important;
+		border-top-width: 3px !important;
+	}
+
+	#footer .footer_content
+	{
+		background-color: #000 !important;
+		border-top-color: #f56b2a !important;
+		border-top-style: solid !important;
+		border-top-width: 3px !important;
+	}
+
+	.customSelect.visible
+	{
+		background-color: #000 !important;
+		border-color: #4183d7 !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	ul.clearfix > li > a ,.select
+	{
+		color: #4183d7 !important;
+	}
+
+	.selectWrapper
+	{
+		filter: invert(100%) hue-rotate(180deg) contrast(90%) saturate(200%) brightness(125%);
+		border-color: #4183d7 !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	.flag
+	{
+		border-color: #fff !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	.flag_fra
+	{
+		filter: invert(100%) hue-rotate(180deg) contrast(90%) saturate(200%) brightness(125%);
+		border-color: #fff !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+
+		 /*  cokies  */
+
+	#cookieBanner
+	{
+		background-color: #4183d7 !important;
+	}
+
+	#cookieBanner a
+	{
+		color: #000 !important;
+		font-size: 100%;
+	}
+
+	div.clearfix > p:nth-child(2)
+	{
+		font-size: 150%;
+	}
+
+	/*  ofres */
+
+
+			/* recherche */
+
+	#searchbox
+	{
+		background-color: #000 !important;
+		border-bottom-color: #f56b2a !important;
+		border-bottom-style: solid !important;
+		border-bottom-width: 3px !important;
+	}
+
+	.checkbox, .input, .input.valid, .input.error, .textarea , .inputWrapper .nude, .searchbox_rowText
+	{
+		color: #e1e1e1 !important;
+	}
+
+	.input, .input.valid, .input.error, .textarea, .inputWrapper
+	{
+		background-color: #555 !important;
+		border-color: #4183d7 !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	.inputWrapper .nude
+	{
+		background-color: #555 !important;
+	}
+
+	option, .location-list.visible
+	{
+		background-color: #111 !important;
+	}
+
+	.location-list li.selected
+	{
+		background-color: #000 !important;
+	}
+
+	.location-list li:hover ,  #searcharea > option:hover
+	{
+		background-color: #f56b2a !important;
+		color: #e1e1e1 !important;
+	}
+
+	.customSelect a
+	{
+		color: #4183d7 !important;
+	}
+
+	.customSelect a:hover
+	{
+		color: #f56b2a !important;
+		font-weight: bold !important;
+		font-style: italic !important;
+		text-decoration: underline !important;
+	}
+
+	.customSelect_categories .title
+	{
+		background-color: #111 !important;
+		border-color: #fff !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+
+
+
+	/* tableau résultats */
+
+	.tabsContent
+	{
+		border-color: #f56b2a !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	.list_item
+	{
+		background-color: #000 !important;
+		border-color: #f56b2a !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	.list_item:hover
+	{
+		background-color: #111 !important;
+		border-color: #4183d7 !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	.list_item:focus
+	{
+		background-color: #222 !important;
+		border-color: #4183d7 !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	.item_supp   , .item_slogan, .item_nbAds
+	{
+		color: #e1e1e1 !important;
+	}
+
+	.item_title
+	{
+		color: #4183d7 !important;
+	}
+
+	 /* en savoir plus */
+	a.title
+	{
+		background-color: #111 !important;
+	}
+
+
+	/* hover  */
+
+	.item_supp:hover,  .item_title:hover
+	{
+		color: #f56b2a !important;
+		font-weight: bold !important;
+		font-style: italic !important;
+		text-decoration: underline !important;
+	}
+
+	/* onglets + tri  */
+
+	.list_properties a
+	{
+		color: #4183d7 !important;
+		background-color: #000 !important;
+		background-size: 120% !important;
+	}
+
+	.tabsHeader nav, .tabsSwitch:focus
+	{
+		border: unset !important;
+	}
+
+	.tabsSwitch.active
+	{
+		background-color: #000 !important;
+		border-top-color: #f56b2a !important;
+		border-top-style: solid !important;
+		border-top-width: 3px !important;
+		border-left-color: #f56b2a !important;
+		border-left-style: solid !important;
+		border-left-width: 3px !important;
+		border-right-color: #f56b2a !important;
+		border-right-style: solid !important;
+		border-right-width: 3px !important;
+		border-bottom: unset !important;
+	}
+
+	.tabsSwitch
+	{
+		background-color: #111 !important;
+		color: #4183d7 !important;
+		border-top-color: #4183d7 !important;
+		border-top-style: solid !important;
+		border-top-width: 1px !important;
+		border-left-color: #4183d7 !important;
+		border-left-style: solid !important;
+		border-left-width: 1px !important;
+		border-right-color: #4183d7 !important;
+		border-right-style: solid !important;
+		border-right-width: 1px !important;
+		border-bottom: unset !important;
+	}
+
+	.tabsSwitchNumbers
+	{
+		color: #e1e1e1 !important;
+	}
+
+
+	 /* details annonces  */
+
+	.breadcrumbsNav ul a
+	{
+		color: #4183d7 !important;
+	}
+
+	.breadcrumbsNav ul a:hover
+	{
+		color: #f56b2a !important;
+	}
+
+	.breadcrumbsNav ul li, .breadcrumbsNav ul a
+	{
+		font-size: 17px;
+	}
+
+	#adview .adview
+	{
+		background-color: #000 !important;
+		border-color: #f56b2a !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	.item_image
+	{
+		background-color: #111 !important;
+		border-color: #f56b2a !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	.properties .line
+	{
+		border-top-color: #f56b2a !important;
+		border-top-style: solid !important;
+		border-top-width: 1px !important;
+	}
+
+	.properties, .properties.lineNegative .line .property
+	{
+		background-color: #000 !important;
+	}
+
+	.properties.lineNegative .line .property
+	{
+		padding-left: 20px !important;
+	}
+
+	.properties.lineNegative .line .property
+	{
+		position: absolute;
+		left: 0px !important;
+	}
+
+	span.value
+	{
+		position: relative;
+		left: 200px !important;
+	}
+
+	.properties .line h2.item_price .property
+	{
+		color: #e1e1e1 !important;
+	}
+
+	.properties .line.properties_description .value
+	{
+		padding: 75px 20px !important;
+	}
+
+	#adview .sharer_title
+	{
+		color: #e1e1e1 !important;
+	}
+
+
+	/* déposer une anonce */
+
+	/* ancien dépot   */
+
+	#accessToTheFuture , .content-color
+	{
+		background-color: #000 !important;
+	}
+
+	#accessToTheFuture .button:hover
+	{
+		color: #f56b2a !important;
+		background-color: #fff !important;
+		border-color: #f56b2a !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	.page_width
+	{
+		background-color: #000 !important;
+		border-left-color: #f56b2a !important;
+		border-left-style: solid !important;
+		border-left-width: 3px !important;
+		border-right-color: #f56b2a !important;
+		border-right-style: solid !important;
+		border-right-width: 3px !important;
+	}
+
+	.adinput .select
+	{
+		filter: invert(100%) hue-rotate(180deg) contrast(90%) saturate(200%) brightness(125%);
+		border-color: #4183d7 !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	#comptepro_disable_fields
+	{
+		color: #000 !important;
+	}
+
+	select
+	{
+		color: #4183d7 !important;
+	}
+
+	input#zipcode , input#city, .adinput input, .adinput textarea, .image_box
+	{
+		color: #e1e1e1 !important;
+		background-color: #111 !important;
+		border-color: #4183d7 !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	.photosup_ad_option_box_class
+	{
+		background-color: #000 !important;
+		border-bottom-color: #f56b2a !important;
+		border-bottom-style: solid !important;
+		border-bottom-width: 3px !important;
+		border-left-color: #f56b2a !important;
+		border-left-style: solid !important;
+		border-left-width: 3px !important;
+		border-right-color: #f56b2a !important;
+		border-right-style: solid !important;
+		border-right-width: 3px !important;
+		border-top: unset !important;
+	}
+
+	div.photosup_ad_label
+	{
+		background-color: #000 !important;
+		border-top-color: #f56b2a !important;
+		border-top-style: solid !important;
+		border-top-width: 3px !important;
+		border-left-color: #f56b2a !important;
+		border-left-style: solid !important;
+		border-left-width: 3px !important;
+		border-right-color: #f56b2a !important;
+		border-right-style: solid !important;
+		border-right-width: 3px !important;
+		border-bottom: unset !important;
+	}
+
+
+
+	/* nouveau dépot  */
+
+	.radio , .label-info
+	{
+		color: #e1e1e1 !important;
+	}
+
+	.label-info
+	{
+		background-color: #111 !important;
+		border-color: #4183d7 !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	.file_container, .file_container-orange
+	{
+		background-color: #111 !important;
+		border-color: #4183d7 !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	#backToTheFuture
+	{
+		background-color: #111 !important;
+		border-top-color: #f56b2a !important;
+		border-top-style: solid !important;
+		border-top-width: 3px !important;
+	}
+
+
+	/* mes annonces  */
+
+	.block-white
+	{
+		background-color: #111 !important;
+	}
+
+	#myads_search .searchbox
+	{
+		background-color: #000 !important;
+		border-top-color: #f56b2a !important;
+		border-top-style: solid !important;
+		border-top-width: 3px !important;
+		border-bottom-color: #f56b2a !important;
+		border-bottom-style: solid !important;
+		border-bottom-width: 3px !important;
+	}
+
+	#myads .information
+	{
+		background-color: #000 !important;
+		border-color: #4183d7 !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+
+
+	/* boutiques */
+
+
+	#store-listingStores .sidebar .container .button-orange:hover
+	{
+		background-color: #fff !important;
+		border-color: #4183d7 !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+
+
+	/* se connecter   */
+
+	.popin-content-template_header
+	{
+		background-color: #000 !important;
+		border-bottom-color: #f56b2a !important;
+		border-bottom-style: solid !important;
+		border-bottom-width: 1px !important;
+	}
+
+	.popin-content-template_main .connexion-form.visible
+	{
+		background-color: #111 !important;
+		border-top-color: #f56b2a !important;
+		border-top-style: solid !important;
+		border-top-width: 3px !important;
+		border-left-color: #f56b2a !important;
+		border-left-style: solid !important;
+		border-left-width: 3px !important;
+		border-right-color: #f56b2a !important;
+		border-right-style: solid !important;
+		border-right-width: 3px !important;
+		border-bottom-color: #f56b2a !important;
+		border-bottom-style: solid !important;
+		border-bottom-width: 3px !important;
+	}
+
+	.popin-content-template_footer
+	{
+		background-color: #000 !important;
+		border-top-color: #f56b2a !important;
+		border-top-style: solid !important;
+		border-top-width: 1px !important;
+	}
+
+								/* mdp oublié  */
+
+	.popin-content-template h3
+	{
+		color: #e1e1e1 !important;
+	}
+
+	.popin-content-template
+	{
+		background-color: #111 !important;
+		border-top-color: #f56b2a !important;
+		border-top-style: solid !important;
+		border-top-width: 3px !important;
+		border-left-color: #f56b2a !important;
+		border-left-style: solid !important;
+		border-left-width: 3px !important;
+		border-right-color: #f56b2a !important;
+		border-right-style: solid !important;
+		border-right-width: 3px !important;
+		border-bottom-color: #f56b2a !important;
+		border-bottom-style: solid !important;
+		border-bottom-width: 3px !important;
+	}
+
+	/* mon conte (head)  color: #fff !important;*/
+
+	#header .myAccount_nav a
+	{
+		background-color: #000 !important;
+		border-bottom-color: #f56b2a !important;
+		border-bottom-style: solid !important;
+		border-bottom-width: 1px !important;
+		border-top: unset !important;
+	}
+
+	#header .myAccount_nav a:hover
+	{
+		background-color: #111 !important;
+		border-color: #4183d7 !important;
+		border-style: solid !important;
+		border-width: 2px !important;
+	}
+
+	.myAccount_nav
+	{
+		border-left-color: #f56b2a !important;
+		border-left-style: solid !important;
+		border-left-width: 2px !important;
+		border-right-color: #f56b2a !important;
+		border-right-style: solid !important;
+		border-right-width: 2px !important;
+		border-bottom-color: #f56b2a !important;
+		border-bottom-style: solid !important;
+		border-bottom-width: 2px !important;
+	}
+
+
+		 /* MON COMPTE TABLEA BORD ANCIEN   */
+	.nav-account li a
+	{
+		background-color: #111 !important;
+		border-color: #4183d7 !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	.nav-account li
+	{
+		border: unset !important;
+	}
+
+	.nav-account li a:hover
+	{
+		background-color: #f56b2a !important;
+		border-color: #fff !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	.nav-account li span:hover
+	{
+		color: #fff !important;
+	}
+
+	.mes_alertes.selected a, .mon_tableau_de_bord.selected a, .mes_achats.selected a, .mes_donnees.selected a, .nos_offres.selected a
+	{
+		background-color: #f56b2a !important;
+		border-color: #4183d7 !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+
+
+	/* conditions générales  */
+
+	.toggle
+	{
+		background-color: #111 !important;
+		border-color: #4183d7 !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+	}
+
+	.toggle span.arrow.bottom
+	{
+		filter: invert(100%)  contrast(100%);
+	}
