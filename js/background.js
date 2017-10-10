@@ -47,6 +47,7 @@ Toggle CSS: based on the current title, insert or remove the CSS.
 Update the page action's title and icon to reflect its state.
 */
 toggleCSS = tab => {
+	applySkin( tab, ['4chan.org'], '4chan', isAuthorized( currentSettings.o_cssW, currentSettings.o_4chan ) );
 	applySkin( tab, ['amazon.'], 'amazone', isAuthorized( currentSettings.o_cssW, currentSettings.o_amazon ) );
 	applySkin( tab, ['ebay.com'], 'ebay', isAuthorized( currentSettings.o_cssW, currentSettings.o_ebay ) );
 	applySkin( tab, ['facebook.com', 'fb.com'], 'facebook', isAuthorized( currentSettings.o_cssW, currentSettings.o_facebook ) );
@@ -54,6 +55,7 @@ toggleCSS = tab => {
 	applySkin( tab, ['www.google.', 'encrypted.google.'], 'google', isAuthorized( currentSettings.o_cssW, currentSettings.o_google ) );
 	applySkin( tab, ['nicovideo.jp'], 'nicovideo', isAuthorized( currentSettings.o_cssW, currentSettings.o_nicovideo ) );
 	applySkin( tab, ['leboncoin.fr'], 'leboncoin', isAuthorized( currentSettings.o_cssW, currentSettings.o_leboncoin ) );
+	applySkin( tab, ['reddit.com'], 'reddit', isAuthorized( currentSettings.o_cssW, currentSettings.o_reddit ) );
 	applySkin( tab, ['stackoverflow.com'], 'stackoverflow', isAuthorized( currentSettings.o_cssW, currentSettings.o_stackoverflow ) );
 	applySkin( tab, ['twitter.com'], 'stackoverflow', isAuthorized( currentSettings.o_cssW, currentSettings.o_twitter ) );
 	applySkin( tab, ['wikipedia.org'], 'wikipedia', isAuthorized( currentSettings.o_cssW, currentSettings.o_wikipedia ) );

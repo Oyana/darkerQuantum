@@ -7,6 +7,7 @@ saveOptions = e =>{
 		o_bgURL: document.querySelector(".o_bgURL").value,
 
 		o_cssW: document.querySelector(".o_cssW:checked").value,
+		o_4chan: document.querySelector(".o_4chan:checked").value,
 		o_amazon: document.querySelector(".o_amazon:checked").value,
 		o_ebay: document.querySelector(".o_ebay:checked").value,
 		o_facebook: document.querySelector(".o_facebook:checked").value,
@@ -14,6 +15,7 @@ saveOptions = e =>{
 		o_google: document.querySelector(".o_google:checked").value,
 		o_leboncoin: document.querySelector(".o_leboncoin:checked").value,
 		o_nicovideo: document.querySelector(".o_nicovideo:checked").value,
+		o_reddit: document.querySelector(".o_reddit:checked").value,
 		o_stackoverflow: document.querySelector(".o_stackoverflow:checked").value,
 		o_twitter: document.querySelector(".o_twitter:checked").value,
 		o_wikipedia: document.querySelector(".o_wikipedia:checked").value,
@@ -34,6 +36,7 @@ restoreOptions = () => {
 		aplyValue( ".o_bgURL", res.o_bgURL, '../img/bg/black.jpg' );
 
 		aplyValue( ".o_cssW", res.o_cssW, false, true );
+		aplyValue( ".o_4chan", res.o_4chan, false, true );
 		aplyValue( ".o_amazon", res.o_amazon, false, true );
 		aplyValue( ".o_ebay", res.o_ebay, false, true );
 		aplyValue( ".o_facebook", res.o_facebook, false, true );
@@ -41,6 +44,7 @@ restoreOptions = () => {
 		aplyValue( ".o_google", res.o_google, false, true );
 		aplyValue( ".o_leboncoin", res.o_leboncoin, false, true );
 		aplyValue( ".o_nicovideo", res.o_nicovideo, false, true );
+		aplyValue( ".o_reddit", res.o_reddit, false, true );
 		aplyValue( ".o_stackoverflow", res.o_stackoverflow, false, true );
 		aplyValue( ".o_twitter", res.o_twitter, false, true );
 		aplyValue( ".o_wikipedia", res.o_wikipedia, false, true );
